@@ -1,0 +1,22 @@
+@import "src/assets/styles/colors";
+.rules {
+  h1 {
+    position: relative;
+    font-weight: bold !important;
+    animation: typewriter 4s;
+  }
+
+  .shield-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  @keyframes typewriter {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1
+    }
+  }
+}
