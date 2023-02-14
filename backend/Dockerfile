@@ -2,12 +2,12 @@ FROM node:16-alpine
 
 WORKDIR /app/backend
 
-COPY ./client/package*.json ./
+COPY ./backend/package*.json ./
 
 RUN npm install
 
-COPY ./client .
+COPY ./backend .
 
-EXPOSE 3000
+EXPOSE 5500
 
 CMD ["npm", "start"]

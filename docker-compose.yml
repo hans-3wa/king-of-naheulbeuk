@@ -11,3 +11,13 @@ services:
       - ./client/node_modules:/app/client/node_modules
     ports:
       - "3000:3000"
+  backend:
+    container_name: api-node
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    volumes:
+      - ./backend:/app/backend
+      - ./backend/node_modules:/app/backend/node_modules
+    ports:
+      - "5500:5500"
