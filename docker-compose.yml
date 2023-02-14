@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  client:
+    container_name: react-app
+    build:
+      context: .
+      dockerfile: ./client/Dockerfile
+    volumes:
+      - ./client:/app/client
+      - ./client/node_modules:/app/client/node_modules
+    ports:
+      - "3000:3000"
